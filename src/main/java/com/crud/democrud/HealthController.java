@@ -10,10 +10,10 @@ import java.util.Map;
 @RestController
 public class HealthController {
 
-    @GetMapping("/health")
+    @GetMapping("/api/v1/health")
     public Map<String, Object> health() {
         Map<String, Object> response = new HashMap<>();
-        response.put("message", "OK");
+        response.put("message", "API is up and running...");
         response.put("time", Instant.now().toString());
         return response;
     }
